@@ -29,7 +29,7 @@ enum Spells
 
 enum Events
 {
-    EVENT_MIND_SPIKE,
+    EVENT_MIND_SPIKE = 1,
     EVENT_SHADOW_WORD_PAIN,
     EVENT_SOUL_VESSEL,
     EVENT_TORN_SPIRITS,

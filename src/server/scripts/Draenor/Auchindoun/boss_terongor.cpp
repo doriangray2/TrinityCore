@@ -40,7 +40,7 @@ enum Spells
 
 enum Events
 {
-    EVENT_AGONY,
+    EVENT_AGONY = 1,
     EVENT_CHAOS_BOLT,
     EVENT_CHAOS_WAVE,
     EVENT_CONFLAGRATE,

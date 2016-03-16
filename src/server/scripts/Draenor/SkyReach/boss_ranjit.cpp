@@ -28,7 +28,7 @@ enum Spells
 
 enum Events
 {
-    EVENT_FAN_OF_BLADES,
+    EVENT_FAN_OF_BLADES = 1,
     EVENT_FOUR_WINDS,
     EVENT_PIERCING_RUSH,
     EVENT_WINDWALL,

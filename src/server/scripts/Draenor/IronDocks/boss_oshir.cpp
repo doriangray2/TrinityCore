@@ -29,7 +29,7 @@ enum Spells
 
 enum Events
 {
-    EVENT_BREAKOUT,
+    EVENT_BREAKOUT = 1,
     EVENT_FEEDING_FRENZY,
     EVENT_PRIMAL_ASSAULT,
     EVENT_TIME_TO_FEED,

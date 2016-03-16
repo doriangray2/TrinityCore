@@ -26,7 +26,7 @@ enum Spells
 
 enum Events
 {
-    EVENT_CANNON_BARRAGE,
+    EVENT_CANNON_BARRAGE = 1,
     EVENT_GRONN_SMASH,
 };
 
