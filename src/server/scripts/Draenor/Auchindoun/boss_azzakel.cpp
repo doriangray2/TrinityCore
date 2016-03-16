@@ -1,9 +1,21 @@
 /*
- * boss_azzakel.cpp
+ * Copyright (C) 2008-2016 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
- *  Created on: 14 de mar. de 2016
- *      Author: Infamous
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation; either version 2 of the License, or (at your
+ * option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
+
 #include "ScriptMgr.h"
 #include "Cell.h"
 #include "CellImpl.h"
@@ -24,14 +36,16 @@
 #include "SpellScript.h"
 #include "SpellAuraEffects.h"
 
-enum Spells{
+enum Spells
+{
 	SPELL_CLAWS_OF_ARGUS = 153764,
 	SPELL_CURTAIN_OF_FLAME = 153396,
 	SPELL_FEL_LASH = 153234,
 	SPELL_MALEVOLENT_CRASH = 153499,
 };
 
-enum Events{
+enum Events
+{
 	EVENT_CLAWS_OF_ARGUS,
 	EVENT_CURTAIN_OF_FLAME,
 	EVENT_FEL_LASH,
@@ -49,27 +63,32 @@ public:
 		{
 		}
 
-		void Reset() override {
+		void Reset() override
+				{
 			BossAI::Reset();
-		}
+				}
 
-		void EnterCombat(Unit* victim) override {
+		void EnterCombat(Unit* victim) override
+				{
 			BossAI::EnterCombat(victim);
-			
+
 			events.ScheduleEvent(EVENT_CLAWS_OF_ARGUS, 4000);
 			events.ScheduleEvent(EVENT_CURTAIN_OF_FLAME, 8000);
 			events.ScheduleEvent(EVENT_FEL_LASH, 12000);
 			events.ScheduleEvent(EVENT_MALEVOLENT_CRASH, 16000);
-		}
+				}
 
-		void KilledUnit(Unit * /*victim*/) override {
-		}
+		void KilledUnit(Unit * /*victim*/) override
+				{
+				}
 
-		void JustDied(Unit * /*victim*/) override {
+		void JustDied(Unit * /*victim*/) override
+				{
 			_JustDied();
-		}
+				}
 
-		void UpdateAI(uint32 diff) override {
+		void UpdateAI(uint32 diff) override
+				{
 			if (!UpdateVictim())
 				return;
 
@@ -104,12 +123,13 @@ public:
 			}
 
 			DoMeleeAttackIfReady();
-		}
+				}
 	};
 
-	CreatureAI* GetAI(Creature* creature) const override {
+	CreatureAI* GetAI(Creature* creature) const override
+			{
 		return new boss_azzakelAI(creature);
-	}
+			}
 };
 
 void AddSC_boss_azzakel()
