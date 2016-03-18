@@ -48,12 +48,12 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_CONSECRATED_LIGHT, 4000);
@@ -61,19 +61,19 @@ public:
             events.ScheduleEvent(EVENT_HOLY_SHIELD, 12000);
             events.ScheduleEvent(EVENT_SANCTIFIED_GROUND, 16000);
             events.ScheduleEvent(EVENT_SANCTIFIED_STRIKE, 20000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -112,13 +112,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new boss_vigilant_kaatharAI(creature);
-            }
+    }
 };
 
 void AddSC_boss_vigilant_kaathar()

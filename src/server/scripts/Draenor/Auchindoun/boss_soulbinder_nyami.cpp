@@ -47,31 +47,31 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_MIND_SPIKE, 4000);
             events.ScheduleEvent(EVENT_SHADOW_WORD_PAIN, 8000);
             events.ScheduleEvent(EVENT_SOUL_VESSEL, 12000);
             events.ScheduleEvent(EVENT_TORN_SPIRITS, 16000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -106,13 +106,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new boss_soulbinder_nyamiAI(creature);
-            }
+    }
 };
 
 void AddSC_boss_soulbinder_nyami()

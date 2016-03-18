@@ -46,31 +46,31 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_FAN_OF_BLADES, 4000);
             events.ScheduleEvent(EVENT_FOUR_WINDS, 8000);
             events.ScheduleEvent(EVENT_PIERCING_RUSH, 12000);
             events.ScheduleEvent(EVENT_WINDWALL, 16000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -105,13 +105,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new boss_ranjitAI(creature);
-            }
+    }
 };
 
 void AddSC_boss_ranjit()

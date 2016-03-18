@@ -32,7 +32,8 @@ void AddSC_boss_terongor();
 
 void AddSC_boss_ranjit();
 
-void AddDraenorScripts(){
+void AddDraenorScripts()
+{
 
 	/* Bloodmaul Slag Mines */
 	AddSC_Boss_SlaveWatcherCrushto();

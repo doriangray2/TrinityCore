@@ -53,12 +53,12 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_CRUSHINGLEAP, 4000);
@@ -66,19 +66,19 @@ public:
             events.ScheduleEvent(EVENT_FEROCIOUSYELL, 12000);
             events.ScheduleEvent(EVENT_RAISETHEMINNERS, 16000);
             events.ScheduleEvent(EVENT_WILDSLAM, 20000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -124,13 +124,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new Boss_SlaveWatcherCrushtoAI(creature);
-            }
+    }
 };
 
 void AddSC_Boss_SlaveWatcherCrushto()

@@ -70,12 +70,12 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_AGONY, 4000);
@@ -94,19 +94,19 @@ public:
             events.ScheduleEvent(EVENT_SHADOW_BOLT, 16000);
             events.ScheduleEvent(EVENT_TOUCH_OF_CHAOS, 20000);
             events.ScheduleEvent(EVENT_UNSTABLE_AFFLICTION, 4000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -189,13 +189,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new boss_terongorAI(creature);
-            }
+    }
 };
 
 void AddSC_boss_terongor()

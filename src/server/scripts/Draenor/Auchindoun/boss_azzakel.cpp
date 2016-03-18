@@ -47,31 +47,31 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_CLAWS_OF_ARGUS, 4000);
             events.ScheduleEvent(EVENT_CURTAIN_OF_FLAME, 8000);
             events.ScheduleEvent(EVENT_FEL_LASH, 12000);
             events.ScheduleEvent(EVENT_MALEVOLENT_CRASH, 16000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -106,13 +106,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new boss_azzakelAI(creature);
-            }
+    }
 };
 
 void AddSC_boss_azzakel()

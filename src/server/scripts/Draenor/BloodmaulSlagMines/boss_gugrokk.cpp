@@ -56,31 +56,31 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_MAGMAERUPTION, 4000);
             events.ScheduleEvent(EVENT_MOLTENBLAST, 8000);
             events.ScheduleEvent(EVENT_MOLTENCORE, 12000);
             events.ScheduleEvent(EVENT_SUMMON_UNSTABLE_SLAG, 16000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -118,13 +118,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new Boss_GugrokkAI(creature);
-            }
+    }
 };
 
 class NPC_Unstable_Slag : public CreatureScript
@@ -139,11 +139,11 @@ public:
         }
 
         void EnterCombat(Unit* /*who*/) override
-                {
-                }
+        {
+        }
 
         void UpdateAI(uint32 /*diff*/) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -154,7 +154,7 @@ public:
                 DoMeleeAttackIfReady();
                 isFlaming = false;
             }
-                }
+        }
 
     private:
         bool isFlaming = false;
@@ -162,9 +162,9 @@ public:
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new NPC_Unstable_SlagAI(creature);
-            }
+    }
 
 };
 

@@ -47,31 +47,31 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_BREAKOUT, 4000);
             events.ScheduleEvent(EVENT_FEEDING_FRENZY, 8000);
             events.ScheduleEvent(EVENT_PRIMAL_ASSAULT, 12000);
             events.ScheduleEvent(EVENT_TIME_TO_FEED, 16000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -106,13 +106,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new boss_oshirAI(creature);
-            }
+    }
 };
 
 void AddSC_boss_oshir()

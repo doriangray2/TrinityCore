@@ -46,31 +46,31 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_ABRUPT_RESTORATION, 4000);
             events.ScheduleEvent(EVENT_BLOOD_BOLT, 8000);
             events.ScheduleEvent(EVENT_SANGUINE_SPHERE, 12000);
             events.ScheduleEvent(EVENT_TAINTED_BLOOD, 16000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -105,13 +105,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new boss_ahriok_dugruAI(creature);
-            }
+    }
 };
 
 void AddSC_boss_ahriok_dugru()

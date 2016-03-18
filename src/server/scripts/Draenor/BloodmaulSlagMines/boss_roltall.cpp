@@ -50,12 +50,12 @@ public:
         }
 
         void Reset() override
-                {
+        {
             BossAI::Reset();
-                }
+        }
 
         void EnterCombat(Unit* victim) override
-                {
+        {
             BossAI::EnterCombat(victim);
 
             events.ScheduleEvent(EVENT_BURNINGSLAG, 4000);
@@ -63,19 +63,19 @@ public:
             events.ScheduleEvent(EVENT_FIERYBOULDER, 12000);
             events.ScheduleEvent(EVENT_HEATWAVE, 16000);
             events.ScheduleEvent(EVENT_MOLTENREACH, 20000);
-                }
+        }
 
         void KilledUnit(Unit * /*victim*/) override
-                {
-                }
+        {
+        }
 
         void JustDied(Unit * /*victim*/) override
-                {
+        {
             _JustDied();
-                }
+        }
 
         void UpdateAI(uint32 diff) override
-                {
+        {
             if (!UpdateVictim())
                 return;
 
@@ -114,13 +114,13 @@ public:
             }
 
             DoMeleeAttackIfReady();
-                }
+        }
     };
 
     CreatureAI* GetAI(Creature* creature) const override
-            {
+    {
         return new Boss_RoltallAI(creature);
-            }
+    }
 };
 
 void AddSC_Boss_Roltall()
