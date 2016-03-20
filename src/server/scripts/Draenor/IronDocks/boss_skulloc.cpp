@@ -49,7 +49,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_CANNON_BARRAGE, 4000);
             events.ScheduleEvent(EVENT_GRONN_SMASH, 8000);
         }
@@ -89,7 +88,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };

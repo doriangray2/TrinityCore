@@ -1,4 +1,4 @@
---- Bloodmaul Slag Mines
+-- Bloodmaul Slag Mines
 UPDATE creature_template SET minlevel=92, maxlevel=103, faction=1791, ScriptName='boss_slave_watcher_crushto' WHERE entry=74787;
 UPDATE creature_template SET minlevel=92, maxlevel=103, faction=1791, ScriptName='boss_roltall' WHERE entry=75786;
 UPDATE creature_template SET minlevel=92, maxlevel=103, faction=1791, ScriptName='boss_gugrokk' WHERE entry=74790;

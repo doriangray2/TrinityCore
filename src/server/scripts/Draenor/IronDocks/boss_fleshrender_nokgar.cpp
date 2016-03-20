@@ -51,7 +51,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_BARBED_ARROW_BARRAGE, 4000);
             events.ScheduleEvent(EVENT_INTIMIDATED, 8000);
             events.ScheduleEvent(EVENT_RECKLESS_PROVOCATION, 12000);
@@ -96,7 +95,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };

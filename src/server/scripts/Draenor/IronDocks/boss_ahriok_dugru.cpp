@@ -53,7 +53,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_ABRUPT_RESTORATION, 4000);
             events.ScheduleEvent(EVENT_BLOOD_BOLT, 8000);
             events.ScheduleEvent(EVENT_SANGUINE_SPHERE, 12000);
@@ -103,7 +102,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };
@@ -118,11 +116,3 @@ void AddSC_boss_ahriok_dugru()
 {
     new boss_ahriok_dugru();
 }
-
-
-
-
-
-
-
-

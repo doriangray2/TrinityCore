@@ -57,7 +57,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_BURNINGSLAG, 4000);
             events.ScheduleEvent(EVENT_BURNINGSLAG_INSTANT, 8000);
             events.ScheduleEvent(EVENT_FIERYBOULDER, 12000);
@@ -112,7 +111,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };

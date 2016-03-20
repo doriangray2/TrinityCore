@@ -55,7 +55,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_CONSECRATED_LIGHT, 4000);
             events.ScheduleEvent(EVENT_HALLOWED_GROUND, 8000);
             events.ScheduleEvent(EVENT_HOLY_SHIELD, 12000);
@@ -110,7 +109,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };

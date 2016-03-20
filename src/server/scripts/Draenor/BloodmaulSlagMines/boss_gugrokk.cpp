@@ -63,7 +63,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_MAGMAERUPTION, 4000);
             events.ScheduleEvent(EVENT_MOLTENBLAST, 8000);
             events.ScheduleEvent(EVENT_MOLTENCORE, 12000);
@@ -116,7 +115,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };
@@ -165,7 +163,6 @@ public:
     {
         return new NPC_Unstable_SlagAI(creature);
     }
-
 };
 
 void AddSC_Boss_Gugrokk()
@@ -173,6 +170,3 @@ void AddSC_Boss_Gugrokk()
     new Boss_Gugrokk();
     new NPC_Unstable_Slag();
 }
-
-
-

@@ -104,7 +104,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };
@@ -119,4 +118,3 @@ void AddSC_boss_soulbinder_nyami()
 {
     new boss_soulbinder_nyami();
 }
-

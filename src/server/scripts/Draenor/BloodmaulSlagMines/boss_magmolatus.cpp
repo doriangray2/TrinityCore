@@ -55,7 +55,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_MAGMABARRAGE, 4000);
             events.ScheduleEvent(EVENT_MAGMABARRAGE_AOE, 8000);
             events.ScheduleEvent(EVENT_MOLTENBINDING, 12000);
@@ -111,7 +110,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };
@@ -126,5 +124,3 @@ void AddSC_Boss_Magmolatus()
 {
     new Boss_Magmolatus();
 }
-
-

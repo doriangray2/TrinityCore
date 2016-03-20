@@ -34,7 +34,6 @@ void AddSC_boss_ranjit();
 
 void AddDraenorScripts()
 {
-
 	/* Bloodmaul Slag Mines */
 	AddSC_Boss_SlaveWatcherCrushto();
 	AddSC_Boss_Roltall();
@@ -55,9 +54,4 @@ void AddDraenorScripts()
 
 	/* Sky Reach */
 	AddSC_boss_ranjit();
-
 }
-
-
-
-

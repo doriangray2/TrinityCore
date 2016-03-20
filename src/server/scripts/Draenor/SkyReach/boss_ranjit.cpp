@@ -53,7 +53,6 @@ public:
         void EnterCombat(Unit* victim) override
         {
             BossAI::EnterCombat(victim);
-
             events.ScheduleEvent(EVENT_FAN_OF_BLADES, 4000);
             events.ScheduleEvent(EVENT_FOUR_WINDS, 8000);
             events.ScheduleEvent(EVENT_PIERCING_RUSH, 12000);
@@ -103,7 +102,6 @@ public:
                     break;
                 }
             }
-
             DoMeleeAttackIfReady();
         }
     };
@@ -118,7 +116,3 @@ void AddSC_boss_ranjit()
 {
     new boss_ranjit();
 }
-
-
-
-
