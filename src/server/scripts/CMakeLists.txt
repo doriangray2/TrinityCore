@@ -25,7 +25,6 @@ PrepareScripts(Spells PRIVATE_SOURCES)
 PrepareScripts(Commands PRIVATE_SOURCES)
 
 if(SCRIPTS)
-<<<<<<< HEAD
   PrepareScripts(Custom scripts_STAT_SRCS)
   PrepareScripts(World scripts_STAT_SRCS)
   PrepareScripts(OutdoorPvP scripts_STAT_SRCS)
@@ -38,18 +37,6 @@ if(SCRIPTS)
   PrepareScripts(Draenor scripts_STAT_SRCS)
   PrepareScripts(Events scripts_STAT_SRCS)
   PrepareScripts(Pet scripts_STAT_SRCS)
-=======
-  PrepareScripts(Custom PRIVATE_SOURCES)
-  PrepareScripts(World PRIVATE_SOURCES)
-  PrepareScripts(OutdoorPvP PRIVATE_SOURCES)
-  PrepareScripts(EasternKingdoms PRIVATE_SOURCES)
-  PrepareScripts(Kalimdor PRIVATE_SOURCES)
-  PrepareScripts(Outland PRIVATE_SOURCES)
-  PrepareScripts(Northrend PRIVATE_SOURCES)
-  PrepareScripts(Maelstrom PRIVATE_SOURCES)
-  PrepareScripts(Events PRIVATE_SOURCES)
-  PrepareScripts(Pet PRIVATE_SOURCES)
->>>>>>> upstream/6.x
 endif()
 
 message(STATUS "SCRIPT PREPARATION COMPLETE")
