@@ -2,6 +2,7 @@
 UPDATE creature_template SET minlevel=92, maxlevel=103, faction=1791, ScriptName='boss_slave_watcher_crushto' WHERE entry=74787;
 UPDATE creature_template SET minlevel=92, maxlevel=103, faction=1791, ScriptName='boss_roltall' WHERE entry=75786;
 UPDATE creature_template SET minlevel=92, maxlevel=103, faction=1791, ScriptName='boss_gugrokk' WHERE entry=74790;
+UPDATE creature_template SET minlevel=90, maxlevel=101, faction=1791, ScriptName='NPC_Unstable_Slag' WHERE entry=74927;
 UPDATE creature_template SET minlevel=92, maxlevel=103, faction=1791, ScriptName='boss_magmolatus' WHERE entry=74366;
 
 -- Iron Docks

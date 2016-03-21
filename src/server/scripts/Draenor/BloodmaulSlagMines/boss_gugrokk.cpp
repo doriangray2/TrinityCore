@@ -109,7 +109,7 @@ public:
                 case EVENT_SUMMON_UNSTABLE_SLAG:
                     DoCast(SPELL_SUMMON_UNSTABLE_SLAG);
                     me->SummonCreature(UNSTABLE_SLAG, pos.GetPositionX(), pos.GetPositionY(),pos.GetPositionZ(), 2.1f, TEMPSUMMON_DEAD_DESPAWN, 5000);
-                    events.ScheduleEvent(EVENT_SUMMON_UNSTABLE_SLAG, 16000);
+                    events.ScheduleEvent(EVENT_SUMMON_UNSTABLE_SLAG, 30000);
                     break;
                 default:
                     break;
