@@ -17,3 +17,5 @@ CMakeLists.txt.user
 *.BASE.*
 *.LOCAL.*
 nbproject/*
+.project
+.cproject
