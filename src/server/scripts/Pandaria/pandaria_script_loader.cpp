@@ -15,6 +15,15 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+void AddSC_boss_armsmaster_harlan();
+void AddSC_boss_flameweaver_koegler();
+void AddSC_boss_houndmaster_braun();
+
 void AddPandariaScripts()
 {
+    /* Scarlet Halls */
+    AddSC_boss_armsmaster_harlan();
+    AddSC_boss_flameweaver_koegler();
+    AddSC_boss_houndmaster_braun();
+
 }
