@@ -23,6 +23,12 @@ void AddSC_boss_brother_korloff();
 void AddSC_boss_high_inquisitor_whitemane();
 void AddSC_boss_thalnos_the_soulrender();
 
+void AddSC_boss_instructor_chillheart();
+void AddSC_boss_jandice_barov();
+void AddSC_boss_rattlegore();
+void AddSC_boss_lilian_voss();
+void AddSC_boss_rattlegore();
+
 void AddPandariaScripts()
 {
     /* Scarlet Halls */
@@ -35,4 +41,10 @@ void AddPandariaScripts()
     AddSC_boss_high_inquisitor_whitemane();
     AddSC_boss_thalnos_the_soulrender();
 
+    /* Scholomance */
+    AddSC_boss_instructor_chillheart();
+    AddSC_boss_jandice_barov();
+    AddSC_boss_rattlegore();
+    AddSC_boss_lilian_voss();
+    AddSC_boss_rattlegore();
 }
