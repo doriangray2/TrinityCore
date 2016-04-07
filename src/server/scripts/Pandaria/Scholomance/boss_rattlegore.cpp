@@ -83,8 +83,8 @@ public:
                     break;
                 }
             }
-            if(DoMeleeAttackIfReady())
-                DoCast(SPELL_RUSTING);
+            DoMeleeAttackIfReady();
+            DoCast(SPELL_RUSTING);
         }
     };
 

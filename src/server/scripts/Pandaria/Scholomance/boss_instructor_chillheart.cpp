@@ -89,8 +89,8 @@ public:
                     break;
                 }
             }
-            if(DoMeleeAttackIfReady())
-                DoCastVictim(SPELL_TOUCH_OF_THE_GRAVE);
+            DoMeleeAttackIfReady();
+            DoCastVictim(SPELL_TOUCH_OF_THE_GRAVE);
         }
     };
 
