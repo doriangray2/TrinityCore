@@ -31,6 +31,30 @@ void AddSC_boss_azzakel();
 void AddSC_boss_terongor();
 
 void AddSC_boss_ranjit();
+void AddSC_boss_araknath();
+void AddSC_boss_high_sage_viryx();
+void AddSC_boss_rukhran();
+
+void AddSC_boss_bonemaw();
+void AddSC_boss_nerzhul();
+void AddSC_boss_nhallish();
+void AddSC_boss_sadana_bloodfury();
+
+void AddSC_boss_nitrogg_thundertower();
+void AddSC_boss_railmaster_rocketspark();
+void AddSC_boss_skylord_tovra();
+
+void AddSC_boss_archmage_sol();
+void AddSC_boss_dulhu();
+void AddSC_boss_witherbark();
+void AddSC_boss_xeritac();
+void AddSC_boss_yalnu();
+
+void AddSC_boss_commander_tharbek();
+void AddSC_boss_kyrak();
+void AddSC_boss_orebender_gorashan();
+void AddSC_boss_ragewing_the_untamed();
+void AddSC_boss_warlord_zaela();
 
 void AddDraenorScripts()
 {
@@ -54,4 +78,32 @@ void AddDraenorScripts()
 
 	/* Sky Reach */
 	AddSC_boss_ranjit();
+	AddSC_boss_araknath();
+	AddSC_boss_high_sage_viryx();
+	AddSC_boss_rukhran();
+
+	/* Shadowmoon Burial Grounds */
+	AddSC_boss_bonemaw();
+	AddSC_boss_nerzhul();
+	AddSC_boss_nhallish();
+	AddSC_boss_sadana_bloodfury();
+
+	/* Grimrail Depot */
+	AddSC_boss_nitrogg_thundertower();
+	AddSC_boss_railmaster_rocketspark();
+	AddSC_boss_skylord_tovra();
+
+	/* The Everbloom */
+	AddSC_boss_archmage_sol();
+	AddSC_boss_dulhu();
+	AddSC_boss_witherbark();
+	AddSC_boss_xeritac();
+	AddSC_boss_yalnu();
+
+	/* Upper Blackrock Spire */
+	AddSC_boss_commander_tharbek();
+	AddSC_boss_kyrak();
+	AddSC_boss_orebender_gorashan();
+	AddSC_boss_ragewing_the_untamed();
+	AddSC_boss_warlord_zaela();
 }
